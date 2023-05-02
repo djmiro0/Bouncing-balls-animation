@@ -1,3 +1,12 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #084991;
+}
 .ball-container {
   position: fixed;
   width: 100%;
@@ -8,8 +17,8 @@
 .ball {
   --animation-duration: 3s; /* add this line */
   position: absolute;
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   animation-duration: var(--animation-duration); /* change this line */
   animation-name: bounce;
@@ -17,36 +26,36 @@
 
 .ball:nth-child(1) {
   --animation-duration: 4s;
-  top: 90%;
+  top: 80%;
   left: 20%;
   background-color: #ed9d20;
 }
 
 .ball:nth-child(2) {
   --animation-duration: 3.5s;
-  top: 90%;
+  top: 80%;
   left: 30%;
   background-color: #ed7220;
 }
 
 .ball:nth-child(3) {
   --animation-duration: 4.2s;
-  top: 90%;
-  left: 40%;
+  top: 80%;
+  left: 45%;
   background-color: #ef5416;
 }
 
 .ball:nth-child(4) {
   --animation-duration: 3.2s;
-  top: 90%;
-  left: 52%;
+  top: 80%;
+  left: 58%;
   background-color: #ea2127;
 }
 
 .ball:nth-child(5) {
   --animation-duration: 4.5s;
-  top: 90%;
-  left: 66%;
+  top: 80%;
+  left: 68%;
   background-color: #ea4221;
 }
 
@@ -110,5 +119,52 @@
   100% {
     transform: translateY(0) translateX(0) scale(0.98);
     animation-timing-function: ease-out;
+  }
+}
+
+@media (max-width: 1100px) {
+  .ball-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .ball {
+    width: 100px;
+    height: 100px;
+  }
+
+  .ball:nth-child(1) {
+    --animation-duration: 4s;
+    top: 80%;
+    left: 5%;
+    background-color: #ed9d20;
+  }
+
+  .ball:nth-child(2) {
+    --animation-duration: 3.5s;
+    top: 80%;
+    left: 25%;
+    background-color: #ed7220;
+  }
+
+  .ball:nth-child(3) {
+    --animation-duration: 4.2s;
+    top: 80%;
+    left: 45%;
+    background-color: #ef5416;
+  }
+
+  .ball:nth-child(4) {
+    --animation-duration: 3.2s;
+    top: 80%;
+    left: 68%;
+    background-color: #ea2127;
+  }
+
+  .ball:nth-child(5) {
+    --animation-duration: 4.5s;
+    top: 80%;
+    left: 88%;
+    background-color: #ea4221;
   }
 }
